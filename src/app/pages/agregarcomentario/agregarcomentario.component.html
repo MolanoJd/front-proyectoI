@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div class="container">
+  <h2>Agregar Comentario a Anteproyecto</h2>
+
+  <!-- Selector de Anteproyecto -->
+  <div class="form-group">
+    <label for="tituloAnteproyecto">Título del Anteproyecto:</label>
+    <select class="form-control" id="tituloAnteproyecto" [(ngModel)]="atrTitulo" name="tituloAnteproyecto" required>
+      <option *ngFor="let anteproyecto of anteproyectos" [value]="anteproyecto.atrTitulo">{{ anteproyecto.atrTitulo }}</option>
+    </select>
+  </div>
+  
+  <div class="comment-box">
+    <div class="form-group">
+      <label for="comentario">Comentario:</label>
+      <textarea class="form-control" id="comentario" [(ngModel)]="comentario" name="comentario" required></textarea>
+    </div>
+  </div>
+  
+  <!-- Botón para Enviar Comentario -->
+  <button type="button" class="btn btn-primary" (click)="addCommentToAnteproyecto()">Agregar Comentario</button>
+  <button type="button" class="btn btn-primary" (click)="agregarDOCAnteproyecto()">Agregar Carta con observaciones</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+<div class="container">
+  <div class="container">
+    <h1>Agregar Archivo a Anteproyecto</h1>
+    <form (ngSubmit)="addFileToAnteproyecto()" enctype="multipart/form-data">
+      <!-- Selector de Anteproyecto -->
+      <div class="form-group">
+        <label for="tituloAnteproyecto">Título del Anteproyecto:</label>
+        <select class="form-control" id="tituloAnteproyecto" [(ngModel)]="atrTitulo" name="tituloAnteproyecto" required>
+          <option *ngFor="let anteproyecto of anteproyectos" [value]="anteproyecto.atrTitulo" title="{{ anteproyecto.atrTitulo }}">{{ anteproyecto.atrTitulo }}</option>
+        </select>
+      </div>
+    <div class="form-group">
+      <label for="archivoAdjunto">Archivo Adjunto: </label>
+      <input type="file" id="archivoAdjunto" name="archivoAdjunto" (change)="onFileSelected($event)" class="form-control-file" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar Archivo</button>
+  </form>
+</div>
+</div>
+</body>
+</html>

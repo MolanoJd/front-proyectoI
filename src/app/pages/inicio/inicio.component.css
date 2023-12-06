@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #003B5C; /* Dark blue color of the university */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.news-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.news {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.news h2 {
+    color: #003B5C; /* Dark blue color of the university */
+    margin-top: 0;
+}
+
+.news .date {
+    color: #999999;
+    font-style: italic;
+}
+
+.news p {
+    color: #333333;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .news {
+        width: 95%;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carrousel{
+    width: 100%;
+}
+
+.conteCarrousel{
+    width: 100%;
+    height: 300px;
+    width: 500px;
+    overflow: hidden;
+}
+
+.itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta{
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselArrows{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.itemCarrouselArrows > i:hover {
+    cursor: pointer;
+}
+
+#itemCarrousel-1{
+    background-color: rgb(226, 50, 50);
+}
+
+#itemCarrousel-2{
+    background-color: rgb(50, 200, 226);
+}
+
+#itemCarrousel-3{
+    background-color: rgb(200, 226, 50);
+}
+
+.conteCarrouselController{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.conteCarrouselController > a{
+    text-decoration: none;
+    font-size: 2em;
+    color: grey;
+}
+
+.itemCarrouselArrows > a > i{
+    color: white;
+}
+footer {
+    background-color: #003B5C; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Añade algo de relleno */
+    position: relative; /* Establece la posición relativa */
+    bottom: 0; /* Alinea el pie de página en la parte inferior */
+    width: 100%; /* Ancho completo */
+}

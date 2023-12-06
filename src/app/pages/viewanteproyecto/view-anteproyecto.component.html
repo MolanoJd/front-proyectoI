@@ -1,0 +1,37 @@
+<mat-card>
+  <h1>Agregar Proyectos</h1>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <form *ngIf="usuario" (submit)="addProject()">
+        <mat-form-field class="w100" appearance="fill">
+          <mat-label>Usuario ID</mat-label>
+          <input
+            [(ngModel)]="username"
+            type="text"
+            name="username"
+            placeholder="Digite el Correo del usuario"
+            required
+            matInput
+          >
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="mt20 w100">
+          <mat-label>Proyectos</mat-label>
+          <mat-select name="proyecto" [(ngModel)]="atrTitulo">
+            <mat-option *ngFor="let anteproyecto of anteproyectos" [value]="anteproyecto.atrTitulo">
+              {{ anteproyecto.atrTitulo }}
+            </mat-option>
+            <!-- Agrega un mensaje de depuración aquí -->
+            <mat-option *ngIf="!anteproyectos || anteproyectos.length === 0" [value]="'-1'">No hay anteproyectos disponibles</mat-option>
+          </mat-select>
+          
+        </mat-form-field>
+        <div class="container text-center">
+          <button mat-raised-button color="primary" type="submit">Guardar</button>
+          <button mat-raised-button color="primary" class="option-button" *ngIf="this.username !== 'jefaturasx@unicauca.edu.co'"(click)="regresarDashboarad()">Regresar</button>
+          <button mat-raised-button color="primary" class="option-button" *ngIf="this.username === 'jefaturasx@unicauca.edu.co'"(click)="regresarHome()">Regresar</button>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+</mat-card>

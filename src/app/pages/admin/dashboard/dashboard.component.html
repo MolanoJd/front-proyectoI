@@ -1,0 +1,16 @@
+<div class="body-content">
+ 
+    <div class="info-box">
+      <p>Nombre: {{ userII?.docente_nombres }}</p>
+      <p>Apellido: {{ userII?.usuario_apellidos }}</p>
+      <p>Código: {{ userII?._Usuario_codigo }}</p>
+      <p>Correo: {{ userII?.email }}</p>
+    </div>
+    
+    <div class="options-container">
+
+      <button class="option-button" (click)="cargarFormularioAnteproyecto()">Registrar Proyecto</button>
+      <button class="option-button">Configuración</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-list class="centered-list">
+      <div mat-subheader class="list-header">Usuarios registrados</div>
+      <mat-list-item>
+        <div class="search-container">
+          <mat-form-field class="search-bar">
+            <input matInput placeholder="Nombre Usuario">
+          </mat-form-field>
+          <button mat-button class="search-button">Buscar</button>
+        </div>
+      </mat-list-item>
+      <mat-list-item *ngFor="let c of usuarios">
+        <div mat-line class="atr-titulo">{{ c.email }}</div>
+        <div mat-line class="comentarios">{{ c.usuario_apellidos }}</div>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>

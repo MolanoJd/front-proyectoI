@@ -1,0 +1,62 @@
+body {
+    font-family: 'Comfortaa', sans-serif;
+  }
+/* styles.css o styles.scss */
+.list-header {
+    font-size: 18px; /* Cambia el tamaño de la letra según tus preferencias */
+    font-weight: bold;
+    color: #333; /* Cambia el color a tu preferencia */
+  }
+  
+  .atr-titulo {
+    font-size: 17px; /* Cambia el tamaño de la letra según tus preferencias */
+    color: #073858; /* Cambia el color a tu preferencia */
+    font-weight: bold;
+    font-family: 'Comfortaa', sans-serif;
+
+  }
+  
+  .comentarios {
+    font-size: 14px; /* Cambia el tamaño de la letra según tus preferencias */
+    color: #666; /* Cambia el color a tu preferencia */
+    font-family: 'Comfortaa', sans-serif;
+  }
+
+  .centered-list {
+    margin: 0 auto; /* Centrar horizontalmente la lista */
+    max-width: 900px; /* Ancho máximo de la lista */
+    padding-left: 10px; /* Reducir margen izquierdo */
+    padding-right: 10px; /* Reducir margen derecho */
+  }
+  
+  .mat-list-base {
+    padding-left: 0; /* Eliminar el margen izquierdo de los elementos de la lista */
+    padding-right: 0; /* Eliminar el margen derecho de los elementos de la lista */
+  }
+
+  .mat-list-item {
+    margin-bottom: 20px; /* Ajusta el valor según tus preferencias */
+  }
+
+  .list-header {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-family: 'Comfortaa', sans-serif;
+    padding-left: 150px;
+    padding-bottom: 50px;
+    /* Otros estilos si los deseas, como el tamaño de la letra y el color. */
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar {
+    flex: 1; /* Hace que la barra de búsqueda ocupe el espacio restante */
+    padding-right: 10px;
+  }
+  
+  .search-button {
+    background-color: #0f4a72; /* Color de fondo azul */
+    color: #fff; /* Texto en blanco */
+  }

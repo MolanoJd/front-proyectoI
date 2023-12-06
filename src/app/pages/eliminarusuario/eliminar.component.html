@@ -1,0 +1,18 @@
+<mat-card class="mt10" *ngFor="let e of usuarios">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>
+      {{ e.docente_nombres }}
+      {{ e.usuario_apellidos }} <!-- Asegúrate de que esta es la propiedad correcta -->
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="warn" class="ml10" (click)="eliminarUsuario(e.id)">Eliminar</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>
+
+<div class="container text-center mt20">
+  <button routerLink="/pages/signup" mat-raised-button color="primary">Agregar Usuarios</button>
+</div>

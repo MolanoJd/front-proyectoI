@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestion de su proyecto</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<mat-card>
+  <mat-list class="centered-list">
+    <div mat-subheader class="list-header">Anteproyectos registrados</div>
+    <mat-list-item>
+      <div class="search-container">
+        <mat-form-field class="search-bar">
+          <input matInput placeholder="Titulo anteproyecto">
+        </mat-form-field>
+        <button mat-button class="search-button">Buscar</button>
+      </div>
+    </mat-list-item>
+    <mat-list-item *ngFor="let c of anteproyectos">
+      <div mat-line class="atr-titulo">{{ c.atrTitulo }}</div>
+      <div mat-line class="comentarios">{{ c.comentarios }}</div>
+      <button class="option-button"(click)="verproyecto(c.id)">Ver</button>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+</body>
+</html>

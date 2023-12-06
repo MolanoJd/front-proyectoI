@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Descargar Archivos de Anteproyecto</h1>
+  
+    <!-- Selector de Anteproyecto -->
+    <div class="form-group">
+      <label for="tituloAnteproyecto">Título del Anteproyecto:</label>
+      <select class="form-control" id="tituloAnteproyecto" [(ngModel)]="atrTitulo" name="tituloAnteproyecto" required>
+        <option *ngFor="let anteproyecto of anteproyectos" [value]="anteproyecto.atrTitulo">{{ anteproyecto.atrTitulo }}</option>
+      </select>
+    </div>
+  
+    <div class="form-group" *ngIf="atrTitulo">
+        <label for="nombreArchivo">Nombre del Archivo:</label>
+        <input type="text" class="form-control" id="nombreArchivo" [(ngModel)]="nombreArchivo" name="nombreArchivo" placeholder="Ingrese el nombre del archivo" required>
+      </div>
+      
+      <div *ngIf="atrTitulo && nombreArchivo">
+        <h2>Archivos en '{{atrTitulo}}'</h2>
+        <button class="btn btn-secondary" (click)="descargarArchivo(nombreArchivo)">Descargar Archivo</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .lista-usuarios, .formulario-actualizacion {
+      width: 48%; /* Ajusta el ancho según tus necesidades */
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- Columna de lista de usuarios -->
+  <div class="lista-usuarios">
+    <h2>Lista de Usuarios</h2>
+    <div *ngFor="let usuario of usuarios">
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ usuario.usuario_nombres }} {{ usuario.usuario_apellidos }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Email: {{ usuario.email }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="primary" (click)="cargarDatosUsuario(usuario.email)">Actualizar</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- Columna de formulario de actualización -->
+<!-- Columna de formulario de actualización -->
+<div class="formulario-actualizacion" *ngIf="selectedUserEmail">
+  <h2>Actualizar Usuario</h2>
+  <form (ngSubmit) = "formSubmit()">
+    <mat-form-field class="full-width"  appearance = "outline">
+      <mat-label>Nombre de usuario</mat-label>
+      <input required [(ngModel)] = "user.email" name = "username" matInput placeholder="Digite su nombre de usuario">
+      <mat-hint>El nombre de usuario debe ser único</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="full-width"  appearance = "outline">
+      <mat-label>Contraseña</mat-label>
+      <input required [(ngModel)] = "user.password" name = "password" type = "password" matInput placeholder="Digite su contraseña">
+    </mat-form-field>
+
+    <mat-form-field class="full-width"  appearance = "outline">
+      <mat-label>Nombre</mat-label>
+      <input required [(ngModel)] = "user.usuario_nombres" name = "nombre" matInput placeholder="Digite su nombre">
+    </mat-form-field>
+
+    <mat-form-field class="full-width"  appearance = "outline">
+      <mat-label>Apellido</mat-label>
+      <input required [(ngModel)] = "user.usuario_apellidos" name = "apellido" matInput placeholder="Digite su apellido">
+    </mat-form-field>
+
+    <mat-form-field class="full-width"  appearance = "outline">
+      <mat-label>Codigo</mat-label>
+      <input required [(ngModel)] = "user.usuario_codigo" name = "codigo" type="email" matInput placeholder="Digite su codigo">
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Rol</mat-label>
+      <mat-select required [(ngModel)]="selectedRole" name="rol">
+        <mat-option value="Estudiante">Estudiante</mat-option>
+        <mat-option value="Consejo">Consejo</mat-option>
+        <mat-option value="Director">Director</mat-option>
+        <mat-option value="Comite">Comite</mat-option>
+        <mat-option value="Departamento">Departamento</mat-option>
+        <mat-option value="Jurado">Jurado</mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <div class = "container text-center">
+      <button mat-raised-button color="primary">Registrar</button>
+      <button type="reset" style = "margin-left: 20px;" mat-raised-button color="accent">Limpiar</button>
+    </div>
+  </form>
+</div>
+
+</div>
+</body>
+</html>

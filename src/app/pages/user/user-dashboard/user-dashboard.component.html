@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>  
+<div class="body-content">
+ 
+    <div class="info-box">
+      <p>Nombre: {{ userII?.usuario_nombres }}</p>
+      <p>Apellido: {{ userII?.usuario_apellidos }}</p>
+      <p>Código: {{ userII?.usuario_codigo }}</p>
+      <p>Rol: {{ userII?.dtype }}</p>
+    </div>
+    
+    <div class="options-container">
+                <!-- Mostrar este botón solo si el usuario es de un cierto tipo -->
+    <button class="option-button" *ngIf="userII?.dtype === 'DIRECTOR'" (click)="cargarFormularioIdea()">Registrar Formato <A>A</A></button>
+    <button class="option-button" *ngIf="userII?.dtype === 'DEPARTAMENTO'" (click)="agregarProyecto()">Asignar Jurados</button>
+   <!-- Mostrar este botón solo si el usuario es de un cierto tipo -->
+   <button class="option-button" *ngIf="userII?.dtype === 'FACULTAD'" (click)="agregarProyecto()">Agregar Jurados</button>
+      <button class="option-button" (click)="agregarDOCAnteproyecto()">Agregar Documentación </button>
+      <button class="option-button" *ngIf="userII?.dtype !== 'COMITE'"(click)="ListarAnteproyectoPorUsuario()">Ver sus proyectos</button>
+      <button class="option-button" *ngIf="userII?.dtype === 'COMITE'"(click)="ListarAnteproyectoPorUsuario()">Ver propuestas</button>
+    </div>
+  </div>
+  </html>

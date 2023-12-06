@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 35vh;
+  font-family: 'Comfortaa', cursive;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 40px;
+  font-family: 'Comfortaa', cursive;
+  margin-right: 30px; /* Agrego margen derecho al título para ampliar el espacio a la derecha. */
+  font-weight: bold; 
+}
+
+.form-group label {
+  font-size: 20px;
+  color: #666;
+}
+
+.form-control {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 30px;
+  margin-right: 20px; /* Agrego margen derecho a los campos del formulario. */
+}
+
+.btn {
+  font-size: 16px;
+  background-color: #104986;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 150px;
+  font-family: 'Comfortaa', cursive;
+}
+
+#tituloAnteproyecto {
+  width: 100%; /* Ocupa todo el ancho disponible de su contenedor */
+  max-width: 400px; /* Establece un ancho máximo */
+  min-width: 200px; /* Establece un ancho mínimo */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Aumenta el ancho al enfocar el select */
+select:focus {
+width: auto; /* O un valor específico que acomode el texto más largo */
+}

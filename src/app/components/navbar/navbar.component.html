@@ -1,0 +1,63 @@
+<header class="header-container">
+  <a [routerLink]="'/'" class="logo">
+    <img src="https://i.ibb.co/pyBJD1B/logofiet.png" alt="Logo de la aplicación">
+  </a>
+  <h1 class="header-title">Sistema de Gestión de Trabajo de Grado</h1>
+  <img src="https://i.ibb.co/7tvbgJw/Unicauca-removebg-preview.png" alt="Imagen derecha" class="right-image">
+</header>
+
+<mat-toolbar color="gray">
+  <button mat-icon-button (click)="toggleNotifications()" class="example-icon" aria-label="Example icon-button with notification icon">
+    <mat-icon>notifications</mat-icon>
+  </button>
+
+
+
+  <!-- Botón de usuario y panel de usuario, mostrado solo si el usuario ha iniciado sesión -->
+  <div *ngIf="isLoggedIn" class="user-info">
+
+    <a [routerLink]="user.username === 'jefaturasx@unicauca.edu.co' ? '/home' : '/user-dashboard'"
+       mat-icon-button
+       class="example-icon"
+       aria-label="Icon button for user dashboard">
+      <mat-icon class="large-icon">account_circle</mat-icon>
+      
+    </a>
+
+  </div>
+
+  <span class="example-spacer"></span>
+  <a
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/login'"
+    style="margin-right: 50px"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    Iniciar Sesion
+  </a>
+  <a
+    *ngIf="isLoggedIn"
+    (click)="logout()"
+    style="margin-right: 50px"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    Cerrar sesión
+  </a>
+  <button
+    *ngIf="isLoggedIn && user"
+    mat-button
+    style="margin-right: 10px"
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    {{ user.username }}
+  </button>
+</mat-toolbar>
+<div *ngIf="notificacion">
+  <p>{{ notificacion }}</p>
+</div>
+

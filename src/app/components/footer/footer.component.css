@@ -1,0 +1,30 @@
+.container-fluid {
+    background-color: #cccbcb; 
+    padding: 10px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+  
+}
+
+.logo-title {
+    font-family: 'Comfortaa', sans-serif;
+    justify-content: center;
+    margin-left: -18px;
+    
+}
+
+.img-fluid {
+    max-width: 50px; 
+    height: auto; 
+    margin-top: 10px;
+    margin-right: 10px; 
+    margin-left: 25px; 
+    font-family: 'Comfortaa', sans-serif; /* Añadido para aplicar la fuente Comfortaa */
+   
+}

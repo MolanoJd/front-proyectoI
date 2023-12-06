@@ -1,0 +1,25 @@
+/* Modificar el tamaño de la letra para el título */
+h1 {
+    font-size: 25px; /* Cambia el tamaño de la letra del título según tus preferencias. */
+    font-family: 'Comfortaa', cursive; /* Cambia la fuente de los botones. */
+    font-weight: bold; 
+  }
+  
+  /* Modificar el tamaño de la letra para los campos de entrada */
+  mat-label, input {
+    font-size: 14px; /* Cambia el tamaño de la letra de los campos de entrada según tus preferencias. */
+    font-family: 'Comfortaa', cursive; /* Cambia la fuente de los botones. */
+  }
+  
+  /* Modificar el margen superior de los botones */
+  button {
+    margin-top: 20px; /* Cambia el margen superior de los botones según tus preferencias. */
+  }
+  
+  /* Modificar el color de fondo y la fuente de los botones */
+  button {
+    background-color: #0d3258; /* Cambia el color de fondo de los botones. */
+    color: #fff; /* Cambia el color de la letra de los botones. */
+    font-family: 'Comfortaa', cursive; /* Cambia la fuente de los botones. */
+    font-size: 16px; /* Cambia el tamaño de la letra de los botones. */
+  }

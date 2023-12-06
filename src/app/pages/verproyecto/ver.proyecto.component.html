@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestion de su proyecto</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<!-- <p>Este párrafo está comentado y no se mostrará</p> <mat-card>
+  <div class="container text-center">
+    <div class="row">
+        <div class="col">
+          <mat-card>
+            <mat-list class="centered-list">
+              <div mat-subheader class="list-header">Proyecto registrado</div>
+              <div mat-line class="atr-titulo">{{ proyecto.atrTitulo }}</div>
+              <div mat-line class="comentarios"><h3> Comentarios: </h3>{{ proyecto.comentarios }}</div>
+              <div mat-line class="atrFechaFin"><h3> Plazo Máximo: </h3>{{ proyecto.atrFechaFin }}</div>
+              <div mat-line class="usuarios"><h3> Nombre de los integrantes: </h3>{{ proyecto.usuarios.docente_nombres }}</div>
+            </mat-list>
+          </mat-card>
+        </div>
+        <div class="col">
+          <mat-card>
+          <div class="text-center mb-3">
+            <p>Formato TI A</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-file-earmark-arrow-up-fill" viewBox="0 0 16 16">
+              <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M6.354 9.854a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 8.707V12.5a.5.5 0 0 1-1 0V8.707z"/>
+            </svg>
+    
+            <button type="button" class="btn btn-secondary btn-sm" (click)="agregarDOCAnteproyecto()">Remitir Consejo Facultad</button>
+          </div>
+          
+          <div class="text-center">
+            <p>Formato TI B</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-file-earmark-arrow-up-fill" viewBox="0 0 16 16">
+              <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M6.354 9.854a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 8.707V12.5a.5.5 0 0 1-1 0V8.707z"/>
+            </svg>
+            <button type="button" class="btn btn-secondary btn-sm" (click)="agregarDOCAnteproyecto()">Remitir evaluaciones</button>
+          </div>
+    
+          <div class="text-center">
+            <p>Descargar Documentación</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="49" height="40" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
+              <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+              <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+            </svg>
+            <button type="button" class="btn btn-secondary btn-sm" (click)="descargarDocumento()"> Descargar Documentación</button>
+          </div>
+        </mat-card>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+        
+          <div class="col-md-12 text-center">
+            
+              <h1>Comentarios</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-plus" viewBox="0 0 16 16">
+              <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+              <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5"/>
+            </svg>
+            <button type="button" class="btn btn-secondary btn-lg"*ngIf="userII?.dtype !== 'JURADO'" (click)="agregarComentario()">Agregar Comentarios</button>
+            <button type="button" class="btn btn-secondary btn-lg"*ngIf="userII?.dtype === 'JURADO'" (click)="agregarComentario()">Decisión sobre Proyectos</button>
+          
+          </div>
+        
+        </div>
+      <mat-card>
+        <div class="col"*ngIf="userII?.dtype === 'FACULTAD'">
+          <div class="col-md-12 text-center">
+            <h1>Jurados</h1>
+               
+         <button class="btn btn-secondary btn-lg" (click)="agregarProyecto()">Agregar Jurados</button>
+          </div>
+          
+        </div>
+        <div class="col">
+
+            3 de 3
+          
+        </div>
+      </mat-card>
+    </div>
+</div>
+</mat-card>
+--> 
+
+
+<div class="page-container">
+  <div class="project-box">
+    <span class="project-name">{{ proyecto?.atrTitulo }}</span>
+  </div>
+  <div class="content-container">
+    <!-- Contenido del contenedor izquierdo (70%) -->
+    <div class="left-content">
+      <h2>ID Fase: {{ proyecto?.atrEstado }}</h2> <h2 *ngIf="userII?.dtype !== 'ASESOR'">Modalidad: Trabajo investigativo</h2>
+      <h2>ID Fase: {{ proyecto?.atrEstado }}</h2> <h2 *ngIf="userII?.dtype === 'ASESOR'">Modalidad: Practica Profesional</h2>
+      <div class="student-box">
+        <h2>Estudiante/s:</h2>
+        <div *ngFor="let estudiante of estudiantes">
+          <p>{{ estudiante.usuario_nombres }} {{ estudiante.usuario_apellidos }}</p>
+          <p>Email: {{ estudiante.email }}</p>
+          <p>Código: {{ estudiante.usuario_codigo }}</p>
+        </div>
+      </div>
+      <div class="student-box" *ngIf="userII?.dtype !== 'ASESOR'">
+        <h2>Directores/s:</h2>
+        <div *ngFor="let director of directores">
+          <p>{{ director.usuario_nombres }} {{ director.usuario_apellidos }}</p>
+          <p>Email: {{ director.email }}</p>
+          <p>Código: {{ director.usuario_codigo }}</p>
+        </div>
+
+      </div>
+      <div class="student-box" *ngIf="userII?.dtype === 'ASESOR'">
+      <h2>Asesores/s:</h2>
+      <div *ngFor="let asesor of asesores">
+        <p>{{ asesor.usuario_nombres }} {{ asesor.usuario_apellidos }}</p>
+        <p>Email: {{ asesor.email }}</p>
+        <p>Código: {{ asesor.usuario_codigo }}</p>
+      </div>
+    </div>
+      <div class="student-box">
+        <h2>Evaluadores:</h2>
+        <div *ngFor="let jurado of jurados">
+          <p>{{ jurado.usuario_nombres }} {{ jurado.usuario_apellidos }}</p>
+          <p>Email: {{ jurado.email }}</p>
+          <p>Código: {{ jurado.usuario_codigo }}</p>
+        </div>
+      </div>
+      <div class="student-box">
+        <div mat-line class="comentarios"><h3> Comentarios: </h3>{{ proyecto?.comentarios }}</div>
+              <div mat-line class="atrFechaFin"><h3> Plazo Máximo: </h3>{{ proyecto?.atrFechaFin }}</div>
+      </div>
+      
+    </div>
+    <!-- Contenido del contenedor derecho (30%) -->
+    <div class="right-content">
+    <div *ngIf="userII?.dtype === 'ESTUDIANTE'">
+      <h2>Solicitudes</h2>
+      <div class="solicitudes-container">
+        <div class="solicitud-box" >
+          <p> Cancelacion de propuesta</p>
+          <button *ngIf="userII?.dtype === 'ESTUDIANTE'">Solicitar</button>
+        </div>
+      </div>
+    </div>
+      <div class="solicitudes-container">
+        <div class="solicitud-box" >
+          <p> Acciones </p>
+          <div class="solicitud-box">
+            <div class="col"*ngIf="userII?.dtype === 'FACULTAD'">
+              <div class="col-md-12 text-center">
+                <h1>Jurados</h1>
+             <button class="btn btn-secondary btn-lg" (click)="agregarProyecto()">Agregar Jurados</button>
+              </div>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" *ngIf="userII?.dtype === 'COMITE'"(click)="agregarDOCAnteproyecto()">Remitir a Director</button>  
+          <button type="button" class="btn btn-secondary btn-sm" *ngIf="userII?.dtype === 'JEFEDEPARTAMENTO'"(click)="agregarProyecto()">Asignar Evaluadores</button>
+          <button type="button" class="btn btn-secondary btn-sm" *ngIf="userII?.dtype === 'JURADO'"(click)="agregarDOCAnteproyecto()">Formato B</button>
+          <p *ngIf="userII?.dtype !== 'JURADO'"> Notificar </p>
+          <button type="button" class="btn btn-secondary btn-lg"*ngIf="userII?.dtype === 'JEFEDEPARTAMENTO'" (click)="agregarProyecto()">Notificar Consejo</button>
+          </div>
+          <div>
+
+          </div>
+          <button *ngIf="userII?.dtype === 'ESTUDIANTE'">Prorroga</button>
+          <button type="button" class="btn btn-secondary btn-lg"*ngIf="userII?.dtype === 'DIRECTOR'" (click)="notificar('comitesistemas@unicauca.edu.co')">Notificar Comite</button>
+
+
+
+        </div>
+      </div>
+    
+      <div class="solicitudes-container" *ngIf="userII?.dtype !== 'JURADO' && userII?.dtype !== 'FACULTAD' && userII?.dtype !== 'COMITE'">
+        <div class="solicitud-box">
+        <p *ngIf="userII?.dtype === 'DIRECTOR'">Formato - A</p>
+        <p *ngIf="userII?.dtype === 'ASESOR'">PP - A</p>
+        <p *ngIf="userII?.dtype === 'ESTUDIANTE'">Subir Documento Final</p>
+        <p *ngIf="userII?.dtype === 'JEFEDEPARTAMENTO'">Formato - B</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-file-earmark-arrow-up-fill" viewBox="0 0 16 16">
+          <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M6.354 9.854a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 8.707V12.5a.5.5 0 0 1-1 0V8.707z"/>
+        </svg>
+        <button type="button" class="btn btn-secondary btn-sm" *ngIf="userII?.dtype === 'JEFEDEPARTAMENTO'"(click)="agregarDOCAnteproyecto()">Remitir evaluaciones</button>
+        <button type="button" class="btn btn-secondary btn-sm" *ngIf="userII?.dtype === 'DIRECTOR'" (click)="agregarDOCAnteproyecto()">Agregar formato</button>
+        <button type="button" class="btn btn-secondary btn-sm" *ngIf="userII?.dtype === 'ASESOR'" (click)="agregarDOCAnteproyecto()">Agregar formato</button>
+        <button type="button" class="btn btn-secondary btn-sm" *ngIf="userII?.dtype === 'ESTUDIANTE'"(click)="agregarDOCAnteproyecto()">Subir Proyecto</button>
+        </div>
+      </div>
+      <div class="text-center">
+        <p *ngIf="userII?.dtype === 'DIRECTOR'">Formato C - E</p>
+        <p *ngIf="userII?.dtype === 'JEFEDEPARTAMENTO'">Formato - C</p>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-file-earmark-arrow-up-fill" viewBox="0 0 16 16">
+          <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M6.354 9.854a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 8.707V12.5a.5.5 0 0 1-1 0V8.707z" *ngIf="userII?.dtype !== 'ESTUDIANTE' && userII?.dtype !== 'JURADO'"/>
+        </svg>
+
+
+        <button type="button" class="btn btn-secondary btn-sm" *ngIf="userII?.dtype === 'DEPARTAMENTO'"(click)="agregarProyecto()">Asignar Evaluadores</button>
+        <button type="button" class="btn btn-secondary btn-sm" *ngIf="userII?.dtype === 'DIRECTOR'"(click)="agregarDOCAnteproyecto()">Subir Formato C</button>
+
+        <button type="button" class="btn btn-secondary btn-sm" *ngIf="userII?.dtype === 'DIRECTOR'"(click)="agregarDOCAnteproyecto()">Subir Formato E</button>
+
+        <button type="button" class="btn btn-secondary btn-sm" *ngIf="userII?.dtype === 'DEPARTAMENTO'"(click)="agregarDOCAnteproyecto()">Remitir evaluaciones</button>
+        <button type="button" class="btn btn-secondary btn-sm" *ngIf="userII?.dtype === 'JEFEDEPARTAMENTO'"(click)="agregarDOCAnteproyecto()">Remitir formato C</button>
+        <button type="button" class="btn btn-secondary btn-sm" *ngIf="userII?.dtype === 'FACULTAD'"(click)="agregarDOCAnteproyecto()">Subir Resolución</button>
+      </div>
+
+      <div class="text-center">
+        <p>Descargar Documentación</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="49" height="40" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
+          <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+          <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+        </svg>
+        <button type="button" class="btn btn-secondary btn-sm" (click)="descargarDocumento()"> Descargar</button>
+      </div>
+      <div class="solicitudes-container">
+        <div class="solicitud-box">
+        <h1>Comentarios</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-plus" viewBox="0 0 16 16">
+          <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+          <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5"/>
+        </svg>
+        <button type="button" class="btn btn-secondary btn-lg"*ngIf="userII?.dtype !== 'JURADO' && userII?.dtype !== 'FACULTAD'" (click)="agregarComentario()">Agregar Comentarios</button>
+        <button type="button" class="btn btn-secondary btn-lg"*ngIf="userII?.dtype === 'JURADO'" (click)="agregarComentario()">Decisión sobre Proyectos</button>
+        <button type="button" class="btn btn-secondary btn-lg"*ngIf="userII?.dtype === 'FACULTAD'" (click)="agregarComentario()">Notificar Aceptación</button>
+        </div>
+      </div>
+    
+    </div>
+  <mat-card>
+
+    </mat-card>
+      </div>
+    </div>
+</body>
+</html>

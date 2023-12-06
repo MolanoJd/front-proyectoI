@@ -1,0 +1,105 @@
+/* Estilos para el contenedor de la página */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Altura del 100% de la ventana */
+  font-family: 'Comfortaa', sans-serif; /* Fuente Comfortaa */
+}
+
+/* Estilos para el contenedor del proyecto */
+.project-box {
+  max-width: 800px; /* Máximo ancho del recuadro */
+  margin: -1 auto; /* Centra el recuadro horizontalmente */
+  margin-bottom: 20px;
+  background-color: #094a8f; /* Fondo azul */
+  color: #fff; /* Texto blanco */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  font-family: 'Comfortaa', sans-serif; /* Fuente Comfortaa */
+  font-size: 20px;
+  margin-left: 300px;
+}
+
+/* Estilos para el nombre del proyecto */
+.project-name {
+  font-size: 20px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  /* Puedes ajustar la altura (line-height) según tus necesidades */
+}
+
+/* Estilos para el contenedor de contenido */
+.content-container {
+  display: flex;
+  flex: 1; /* Hace que el contenedor de contenido ocupe el espacio restante */
+}
+
+/* Estilos para el contenido izquierdo (70%) */
+.left-content {
+  flex: 7; /* Proporción 7 de 10 */
+  background-color: #f0f0f0; /* Fondo gris claro */
+  padding: 20px; /* Espaciado interno */
+  font-size: 14px;
+  border-radius: 10px; /* Bordes redondeados */
+
+}
+
+/* Estilos para el contenido derecho (30%) */
+.right-content {
+  flex: 3; /* Proporción 3 de 10 */
+  background-color: #d0d0d0; /* Fondo gris más claro */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-left: 10px;
+}
+
+.left-content {
+  flex: 7; /* Proporción 7 de 10 */
+  background-color: #f0f0f0; /* Fondo gris claro */
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos para las etiquetas h2 (ID Fase y Modalidad) */
+.left-content h2 {
+  margin-bottom: 10px; /* Espaciado inferior entre las etiquetas h2 */
+  font-family: 'Comfortaa', sans-serif; /* Fuente Comfortaa */
+}
+.student-box {
+  background-color: #094a8f; /* Fondo azul */
+  color: #fff; /* Texto blanco */
+  padding: 20px; /* Espaciado interno */
+  margin-top: 20px; /* Espaciado superior */
+  border-radius: 10px; /* Bordes redondeados */
+  font-family: 'Comfortaa', sans-serif; /* Fuente Comfortaa */
+ 
+  margin-right: 60px;
+}
+
+/* Estilos para las etiquetas h2 y p dentro del recuadro de Estudiante/s */
+.student-box h2,
+.student-box p {
+  margin-bottom: 10px; /* Espaciado inferior entre las etiquetas */
+}
+
+
+/* Estilos para el contenedor de Solicitudes */
+.solicitudes-container {
+  background-color: #868383; /* Fondo azul */
+  color: #fff; /* Texto blanco */
+  padding: 20px; /* Espaciado interno */
+  margin-top: 20px; /* Espaciado superior */
+  border-radius: 10px; /* Bordes redondeados */
+  font-family: 'Comfortaa', sans-serif; /* Fuente Comfortaa */
+  margin-bottom: 20px; /* Espaciado superior */
+}
+
+
+
+/* Estilos para el botón de Solicitar */
+.solicitud-box button {
+  background-color: #0d4179; /* Fondo azul oscuro */
+  color: #fff; /* Texto blanco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+}

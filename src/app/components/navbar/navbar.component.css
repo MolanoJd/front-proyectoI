@@ -1,0 +1,60 @@
+.example-spacer{
+  font-family: "Comfortaa", sans-serif;
+  flex: 1 1 auto;
+}
+.header-container {
+  font-family: "Comfortaa", sans-serif;
+  background-color: #cccbcb; /* Color de fondo gris claro */
+  padding: 8px; /* Espaciado interior del encabezado */
+  display: flex;
+  justify-content: space-between; /* Alinear contenido al espacio entre los elementos */
+  align-items: center; /* Centrar verticalmente el contenido */
+  border-radius: 10px;
+}
+
+.logo {
+  font-family: "Comfortaa", sans-serif;
+  max-width: 250px; /* Ajusta el ancho máximo de la imagen del logo según tus necesidades */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.header-title {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 22px;
+  text-align: center;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  align-items: center; /* Centrar el contenido verticalmente */
+  font-weight: bold;
+}
+
+.right-image {
+  font-family: "Comfortaa", sans-serif;
+  max-width: 100px; /* Ajusta el ancho máximo de la imagen de la derecha según tus necesidades */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+.example-spacer, .example-icon.favorite-icon {
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.mat-toolbar.header-container .button {
+  
+  font-family: "Comfortaa", sans-serif; /* Corrige la tipografía incorrecta */
+  font-size: 18px;
+  text-decoration: none;
+  color: #094a8f;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.mat-toolbar.header-container .login-button {
+  font-family: "Comfortaa", sans-serif; /* Corrige la tipografía incorrecta */
+  font-size: 18px;
+  text-decoration: none;
+  color: #094a8f;
+  margin-left: 0px; /* Ajusta el margen izquierdo a 100px para mover el botón hacia la izquierda */
+  cursor: pointer;
+  font-weight: bold;
+}
